@@ -4,6 +4,6 @@ import { PrioridadService } from './prioridad.service';
 
 @Module({
   controllers: [PrioridadController],
-  providers: [PrioridadService]
+  providers: [PrioridadService],
 })
 export class PrioridadModule {}

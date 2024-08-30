@@ -5,11 +5,13 @@
     <title>STI CCT Tandil</title>
   </head>
   <body>
-    <ul>
-        {{#each prioridades}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
-    {{ Servicio Tecnico Informatica }}
+    <h1>Lista De Prioridades</h1>
+      <div class="container-fluid">
+        <ul class="list-groups">
+            {{#each prioridades}}
+            <li class="list-group-item">{{this.name}}</li>
+            {{/each}}
+        </ul>
+        </div>
   </body>
 </html>

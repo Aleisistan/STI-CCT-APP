@@ -1,12 +1,13 @@
 import { Injectable } from '@nestjs/common';
 
 
-  @Injectable()
+  @Injectable()//en el uso de clases
   export class PrioridadService {
-    getHello(): string {
-      return 'Hola Toloza!';
-    }
-    private readonly prioridades = [
+  
+    //getHello(): string {
+      //return 'Hola Toloza!';
+      
+    private prioridades = [
       {
         "id": 1,
         "name": "Urgente",
@@ -31,4 +32,10 @@ import { Injectable } from '@nestjs/common';
     findAll()  {
       return this.prioridades;
     }
-  };
+    findOne(id: any) {
+      return this.prioridades.find(function(prioridad){
+        return prioridad.id == id;
+      })
+    }
+  }
+
