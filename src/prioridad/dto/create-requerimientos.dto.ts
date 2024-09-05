@@ -1,5 +1,5 @@
 export class CreateRequerimientosDto {
-    "name":string; 
+    "name": string;
     "instituto": string;
     "Prioridad": number;
 }

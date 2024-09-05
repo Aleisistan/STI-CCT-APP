@@ -1,5 +1,6 @@
-import { Body, Controller, Get, Param, Post, Render } from '@nestjs/common';
-import { CreateRequerimientosDto } from './dto/create-requerimientos.dto/create-requerimientos.dto';
+import { Body, Controller, Get, Param, Post, Query, Render } from '@nestjs/common';
+import { CreateRequerimientosDto } from './dto/create-requerimientos.dto';
+import { QueryPrioridadDto } from './dto/Query-Prioridad.dto';
 import { PrioridadService } from './prioridad.service';
 
 
@@ -13,8 +14,11 @@ export class PrioridadController {
     //}
     @Get()
     @Render('prioridades')
-    findAll() {
-      return {prioridades: this.PrioridadService.findAll()};
+    findAll(@Query() query : QueryPrioridadDto)  {
+      let nombre = query.nombre;
+      let sortBy = query.sortBy;
+      let orderBy = query.orderBy
+      return {prioridades: this.PrioridadService.findAll({ name: nombre, sortBy, orderBy })};
     }
     @Get(':id')
     findOne(@Param() params) {
