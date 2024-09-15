@@ -10,27 +10,32 @@ import { Injectable } from '@nestjs/common';
     private prioridades = [
       {
         "id": 1,
-        "name": "Urgente",
+        "name": "Silvia",
+        "priority": "high",
         "descripción": "no enciende equipo, caídas de sistemas y redes"
       },
       {
         "id": 5,
-        "name": "Urgente",
+        "name": "Marcos",
+        "priority": "medium",
         "descripción": "no enciende equipo, caídas de sistemas y redes"
       },
       {
         "id": 2,
-        "name": "Intermedia",
+        "name": "Ines",
+        "priority": "low",
         "descripción": "Virus/Malwares, Desconexión intermitente de la red"
       },
       {
         "id": 3,
-        "name": "Planificada",
+        "name": "Pablo",
+        "priority": "planned",
         "descripción": "Armado de redes, Instalación soft específicos"
       },
       {
         "id": 4,
-        "name": "Mantenimiento",
+        "name": "Nacho",
+        "priority": "Service",
         "descripción": "Optimizacón de hardware y software, Limpieza física"
       }
     ];
